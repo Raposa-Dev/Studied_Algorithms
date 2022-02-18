@@ -1,0 +1,53 @@
+console.log("Contagem de peças");
+console.log("==================================");
+
+const listOfPieces = ["Peça de teste", "AB", "Peça B", "BD Teste"];
+
+console.log("Quantidade de peças: ", listOfPieces.length);
+console.log("__________________________________");
+
+if (listOfPieces.length <= 10) {
+  console.log("As peças podem ser cadastradas!");
+
+  console.log("__________________________________");
+
+  console.log("----------------------------------");
+
+  setTimeout(function () {
+    console.log("Mostrar quantidades de caracteres.");
+
+    console.log("----------------------------------");
+
+    for (let index = 0; index < listOfPieces.length; index++) {
+      const currentPiece = listOfPieces[index];
+
+      if (currentPiece.length < 3) {
+        console.log(
+          `${currentPiece} : A peça possui nome inferior a três caracteres e não pode ser cadastrada!`
+        );
+      } else {
+        console.log(".......................................");
+        console.log(`${currentPiece} : A peça pode ser cadastrada!`);
+        console.log(".......................................");
+      }
+    }
+
+    console.log("__________________________________");
+
+    console.log("Peso da peça.");
+
+    console.log("__________________________________");
+
+    const pieceWeight = 50;
+
+    if (pieceWeight >= 100) {
+      console.log("peso suficiente!");
+    } else {
+      console.log("X peso insuficiente!");
+    }
+
+    console.log("==================================");
+  }, 3000);
+} else {
+  console.log("Limite de peças excedido!");
+}
